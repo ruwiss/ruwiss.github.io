@@ -1,18 +1,18 @@
 const content = {
   tr: {
-    greeting: "Merhaba!",
-    intro: "Ben 4 yıldır Flutter ile mobil uygulamalar geliştiriyorum. Bu süreçte, freelance ve kişisel projelerle kendimi sürekli geliştirdim.",
-    passion: "Bunun dışında, YouTube üzerinde eğitim içerikleri üreterek, bilgilerimi başkalarıyla paylaşıyorum. Bir şeyler anlatmaktan keyif alıyorum.",
-    education: "Lise mezunu bir alaylıyım. Üniversite okumak istemedim. Bunun yerine kendime tecrübe katabilmek için sürekli olarak yeni bilgiler öğrenmeyi hedefledim.",
+    greeting: "Hey! Hoş geldin!",
+    intro: "4 yıldır Flutter kullanarak mobil uygulamalar yapıyorum. Hem serbest çalışarak hem de kendi projelerimi geliştirerek bu yolda ilerliyorum.",
+    passion: "Ayrıca YouTube kanalımda bildiklerimi paylaşmayı çok seviyorum. İnsanlara bir şeyler öğretmek beni mutlu ediyor!",
+    education: "Klasik eğitim yolunu tercih etmedim ve lise sonrası kendi yolumu çizdim. Üniversite yerine pratik deneyim kazanmaya odaklandım. Her gün yeni şeyler öğrenerek kendimi geliştirmeye devam ediyorum.",
     projects: "Projeler",
     email: "E-posta",
   },
 
   en: {
-    greeting: "Hi!",
-    intro: "I have been developing mobile applications with Flutter for 4 years. During this time, I have constantly improved myself through freelance and personal projects.",
-    passion: "Apart from that, I create educational content on YouTube to share my knowledge with others. I truly enjoy teaching and explaining things.",
-    education: "I am a self-taught high school graduate. I chose not to attend university and instead focused on continuously learning new skills to gain experience.",
+    greeting: "Hey! Welcome!",
+    intro: "I've been developing mobile applications using Flutter for 4 years. I'm progressing on this path both as a freelancer and by developing my own projects.",
+    passion: "I also love sharing my knowledge on my YouTube channel. Teaching people makes me happy!",
+    education: "I didn't choose the traditional education path and charted my own course after high school. Instead of university, I focused on gaining practical experience. I continue to improve myself by learning new things every day.",
     projects: "Projects",
     email: "Email",
   },
