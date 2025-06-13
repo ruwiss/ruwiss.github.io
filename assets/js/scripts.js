@@ -1,36 +1,6 @@
-const content = {
-  tr: {
-    greeting: "Hey! Hoş geldin!",
-    intro: "4 yıldır Flutter kullanarak mobil uygulamalar yapıyorum. Hem serbest çalışarak hem de kendi projelerimi geliştirerek bu yolda ilerliyorum.",
-    passion: "Ayrıca YouTube kanalımda bildiklerimi paylaşmayı çok seviyorum. İnsanlara bir şeyler öğretmek beni mutlu ediyor!",
-    education: "Klasik eğitim yolunu tercih etmedim ve lise sonrası kendi yolumu çizdim. Üniversite yerine pratik deneyim kazanmaya odaklandım. Her gün yeni şeyler öğrenerek kendimi geliştirmeye devam ediyorum.",
-    projects: "Projeler",
-    email: "E-posta",
-  },
+// İçerik artık direkt HTML'de sabit olarak tanımlı
 
-  en: {
-    greeting: "Hey! Welcome!",
-    intro: "I've been developing mobile applications using Flutter for 4 years. I'm progressing on this path both as a freelancer and by developing my own projects.",
-    passion: "I also love sharing my knowledge on my YouTube channel. Teaching people makes me happy!",
-    education: "I didn't choose the traditional education path and charted my own course after high school. Instead of university, I focused on gaining practical experience. I continue to improve myself by learning new things every day.",
-    projects: "Projects",
-    email: "Email",
-  },
-};
-
-// URL'deki `lang` parametresini alın
-const urlParams = new URLSearchParams(window.location.search);
-const lang = urlParams.get("lang") || "tr"; // varsayılan dil Türkçe
-
-// Sayfadaki metinleri değiştirin
-document.getElementById("greeting").innerText = content[lang].greeting;
-document.getElementById("intro").innerText = content[lang].intro;
-document.getElementById("passion").innerText = content[lang].passion;
-document.getElementById("education").innerText = content[lang].education;
-document.getElementById("projects").innerText = content[lang].projects;
-document.getElementById("email").innerText = content[lang].email;
-
-// Mobile Menu Toggle
+// Mobile Menu Toggle & Animations
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navRight = document.querySelector(".nav-right");
@@ -39,6 +9,72 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenuBtn.classList.toggle("active");
     navRight.classList.toggle("active");
   });
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, observerOptions);
+
+  // Observe project cards
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(20px)";
+    card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    observer.observe(card);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+
+  // Scroll indicator for projects
+  const createScrollIndicator = () => {
+    const indicator = document.createElement("div");
+    indicator.className = "scroll-indicator";
+    indicator.innerHTML = `
+      <div class="scroll-text">Projelerimi keşfet</div>
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    `;
+    document.body.appendChild(indicator);
+
+    // Hide indicator when user scrolls
+    let scrolled = false;
+    window.addEventListener("scroll", () => {
+      if (!scrolled && window.scrollY > 100) {
+        indicator.style.opacity = "0";
+        indicator.style.transform = "translateX(-50%) translateY(20px)";
+        scrolled = true;
+        setTimeout(() => {
+          indicator.remove();
+        }, 300);
+      }
+    });
+  };
+
+  // Create scroll indicator after a delay
+  setTimeout(createScrollIndicator, 2000);
 });
 
 var Tawk_API = Tawk_API || {},

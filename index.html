@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Flutter geliştiricisi Ömer Gündoğar'ın portföy sayfası. Mobil uygulama geliştirme, YouTube eğitimleri ve açık kaynak projeler." />
+    <meta name="keywords" content="Flutter, mobil uygulama, geliştirici, developer, Ömer Gündoğar, portfolio, portföy" />
+    <meta name="author" content="Ömer Gündoğar" />
+    <meta property="og:title" content="Ömer Gündoğar - Flutter Developer" />
+    <meta property="og:description" content="4 yıldır Flutter kullanarak mobil uygulamalar yapıyorum. Portföyümü inceleyin!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/images/pp.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Ömer Gündoğar</title>
+    <title>Ömer Gündoğar - Software Developer</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
@@ -15,7 +24,7 @@
     <header class="main-header">
       <nav class="nav-container">
         <div class="logo">
-          <a href="#">omergundgr</a>
+          <a href="#" aria-label="Ana Sayfa">omergundgr</a>
         </div>
         <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat">
           <span></span>
@@ -24,46 +33,44 @@
         </button>
         <div class="nav-right">
           <ul class="nav-links">
-            <li><a href="https://github.com/ruwiss" target="_blank">Github Profilim</a></li>
+            <li><a href="https://github.com/ruwiss" target="_blank" rel="noopener noreferrer">Github Profilim</a></li>
           </ul>
-          <div class="language-selector">
-            <a href="?lang=tr"><img src="assets/images/TR.svg" alt="Türkçe" /></a>
-            <a href="?lang=en"><img src="assets/images/GB.svg" alt="English" /></a>
-          </div>
         </div>
       </nav>
     </header>
 
-    <div class="grid-2">
-      <div class="top-section">
-        <div class="section-1">
-          <img src="assets/images/pp.jpeg" alt="Ali Koçaslan" class="profile-img" />
-          <h1>@omergundgr</h1>
-          <p>Ömer Gündoğar</p>
+    <main class="grid-2">
+      <section class="top-section">
+        <div class="hero-profile">
+          <img src="assets/images/pp.jpeg" alt="Ömer Gündoğar profil fotoğrafı" class="profile-img" width="140" height="140" />
+          <h1>Ömer Gündoğar</h1>
+          <p class="hero-subtitle">Software Developer & Content Creator</p>
           <div class="social-icons">
-            <a href="https://wa.me/905433732402" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.youtube.com/@hq_net" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/ruwiss" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/omergundgr/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/905433732402" aria-label="WhatsApp ile iletişim"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@hq_net" aria-label="YouTube kanalım"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/ruwiss" aria-label="GitHub profilim"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/omergundgr/" aria-label="LinkedIn profilim"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <div class="section-2">
-          <h2 id="greeting">Hey! Hoş geldin!</h2>
-          <p id="intro">4 yıldır Flutter kullanarak mobil uygulamalar yapıyorum. Hem serbest çalışarak hem de kendi projelerimi geliştirerek bu yolda ilerliyorum.</p>
-          <p id="passion">Ayrıca YouTube kanalımda bildiklerimi paylaşmayı çok seviyorum. İnsanlara bir şeyler öğretmek beni mutlu ediyor!</p>
-          <h2><i class="fa fa-graduation-cap"></i></h2>
-          <p id="education">Klasik eğitim yolunu tercih etmedim ve lise sonrası kendi yolumu çizdim. Üniversite yerine pratik deneyim kazanmaya odaklandım. Her gün yeni şeyler öğrenerek kendimi geliştirmeye devam ediyorum.</p>
-        </div>
-      </div>
 
-      <div class="bottom-section">
+        <div class="hero-content">
+          <h2 id="greeting">Hey! Hoş geldin! 👋</h2>
+          <p class="hero-description">
+            <strong>4+ yıldır</strong> yazılım geliştirme dünyasında <strong>mobil uygulamalar</strong>, <strong>web projeleri</strong> ve <strong>bot & otomasyon sistemleri</strong> üzerinde çalışıyorum. Hem freelance projeler geliştiriyor hem de <strong>açık kaynak</strong> topluluğuna katkıda
+            bulunuyorum.
+          </p>
+          <p class="hero-passion">🎥 <strong>YouTube kanalımda</strong> teknik bilgileri paylaşarak öğrenme yolculuğumuzu birlikte sürdürüyoruz!</p>
+        </div>
+      </section>
+
+      <section class="bottom-section">
         <div class="section-2">
           <div class="projects-section">
             <h2 id="projects">Projeler</h2>
             <div class="projects-grid">
-              <a href="https://github.com/ruwiss/akilli_market_listem" class="project-card">
+              <a href="https://github.com/ruwiss/akilli_market_listem" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/8.png" alt="Alışveriş Listesi" />
+                  <img src="assets/images/projects/8.png" alt="Akıllı Market Listem uygulaması ekran görüntüsü" loading="lazy" />
                   <!-- <div class="project-badge"><i class="fas fa-code"></i>Geliştiriliyor</div> -->
                 </div>
                 <div class="project-content">
@@ -71,9 +78,9 @@
                   <p>Yapay Zeka ile Yapılmış Alışveriş Listesi Uygulaması</p>
                 </div>
               </a>
-              <a href="https://github.com/caltikoc/pretty_sudoku" class="project-card">
+              <a href="https://github.com/caltikoc/pretty_sudoku" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/7.png" alt="Sudoku Game" />
+                  <img src="assets/images/projects/7.png" alt="Sudoku Game uygulaması ekran görüntüsü" loading="lazy" />
                   <!-- <div class="project-badge"><i class="fas fa-code"></i>Geliştiriliyor</div> -->
                 </div>
                 <div class="project-content">
@@ -81,55 +88,55 @@
                   <p>Puzzle Oyunu</p>
                 </div>
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.prettycat.affirmations" class="project-card">
+              <a href="https://play.google.com/store/apps/details?id=com.prettycat.affirmations" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/6.png" alt="Pretty Affirmations Projesi" />
+                  <img src="assets/images/projects/6.png" alt="Pretty Affirmations uygulaması ekran görüntüsü" loading="lazy" />
                 </div>
                 <div class="project-content">
                   <h3>Pretty Affirmations</h3>
                   <p>Günlük Olumlamalar</p>
                 </div>
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.rw.music_app" class="project-card">
+              <a href="https://play.google.com/store/apps/details?id=com.rw.music_app" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/1.png" alt="Müzik / Video İndirici Projesi" />
-                  <div class="project-badge"><i class="fas fa-download"></i>100K+</div>
+                  <img src="assets/images/projects/1.png" alt="Elen Music uygulaması ekran görüntüsü" loading="lazy" />
+                  <div class="project-badge"><i class="fas fa-download" aria-hidden="true"></i>100K+</div>
                 </div>
                 <div class="project-content">
                   <h3>Elen Music</h3>
                   <p>Müzik ve Video İndirici</p>
                 </div>
               </a>
-              <a href="https://github.com/ruwiss/dini_atlas" class="project-card">
+              <a href="https://github.com/ruwiss/dini_atlas" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/2.png" alt="İslami SuperApp Projesi" />
+                  <img src="assets/images/projects/2.png" alt="İslami SuperApp uygulaması ekran görüntüsü" loading="lazy" />
                 </div>
                 <div class="project-content">
                   <h3>İslami SuperApp</h3>
                   <p>Namaz Vakti ve Kuran'ı Kerim</p>
                 </div>
               </a>
-              <a href="https://github.com/ruwiss/gun_sayaci" class="project-card">
+              <a href="https://github.com/ruwiss/gun_sayaci" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/3.png" alt="Gün Sayacı Projesi" />
+                  <img src="assets/images/projects/3.png" alt="Gün Sayacı uygulaması ekran görüntüsü" loading="lazy" />
                 </div>
                 <div class="project-content">
                   <h3>Gün Sayacı</h3>
                   <p>Özel Günler için Gün Sayacı</p>
                 </div>
               </a>
-              <a href="https://github.com/ruwiss/flutter_music_video_downloader" class="project-card">
+              <a href="https://github.com/ruwiss/flutter_music_video_downloader" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/5.png" alt="Müzik / Video İndirici Projesi" />
+                  <img src="assets/images/projects/5.png" alt="MeloTune uygulaması ekran görüntüsü" loading="lazy" />
                 </div>
                 <div class="project-content">
                   <h3>MeloTune</h3>
                   <p>Müzik / Video İndir - Dinle</p>
                 </div>
               </a>
-              <a href="https://github.com/ruwiss/kac_kisiyiz" class="project-card">
+              <a href="https://github.com/ruwiss/kac_kisiyiz" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
-                  <img src="assets/images/projects/4.png" alt="Ödüllü Anketler Projesi" />
+                  <img src="assets/images/projects/4.png" alt="Kaç Kişiyiz uygulaması ekran görüntüsü" loading="lazy" />
                 </div>
                 <div class="project-content">
                   <h3>Kaç Kişiyiz?</h3>
@@ -138,18 +145,23 @@
               </a>
             </div>
           </div>
-
-          <div class="contact-section">
-            <h2 id="email">İletişim</h2>
-            <a href="mailto:rw67admob@gmail.com" class="contact-card">
-              <i class="fas fa-envelope"></i>
-              <span>rw67admob@gmail.com</span>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ömer Gündoğar",
+        "alternateName": "@omergundgr",
+        "jobTitle": "Flutter Developer",
+        "description": "4 yıldır Flutter kullanarak mobil uygulamalar yapıyorum",
+        "url": "https://ruwiss.github.io",
+        "sameAs": ["https://github.com/ruwiss", "https://www.youtube.com/@hq_net", "https://www.linkedin.com/in/omergundgr/"],
+        "knowsAbout": ["Flutter", "Mobile Development", "Dart", "Android", "iOS"]
+      }
+    </script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>
