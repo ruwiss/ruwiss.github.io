@@ -299,7 +299,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.5rem;
+    margin: 2rem 0 0.5rem 0;
 }
 
 /* Profile Info - Name and Title */
@@ -1108,6 +1108,7 @@ a {
     .hero-section {
         min-height: 55vh;
         padding: 1rem;
+        margin-top: 2rem;
     }
 
     .hero-container {
@@ -1135,7 +1136,7 @@ a {
     .about-card {
         max-width: 100%;
         text-align: center;
-        padding: 1.5rem;
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
         margin: 0 auto;
     }
 
@@ -1345,28 +1346,7 @@ a {
 
 /* Artık buton efekti var, alttan çizgi gereksiz */
 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.mobile-menu-btn span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #f1f5f9;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        z-index: 1000;
-    }
 
     .nav-right {
         display: none;

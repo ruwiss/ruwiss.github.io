@@ -121,15 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Mobile Menu Toggle & Animations
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-  const navRight = document.querySelector(".nav-right");
-
-  mobileMenuBtn.addEventListener("click", function () {
-    mobileMenuBtn.classList.toggle("active");
-    navRight.classList.toggle("active");
-  });
-
   // Scroll animations
   const observerOptions = {
     threshold: 0.1,
