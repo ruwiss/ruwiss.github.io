@@ -1,7 +1,127 @@
-// İçerik artık direkt HTML'de sabit olarak tanımlı
-
-// Mobile Menu Toggle & Animations
+// Modern Hero Section Animations
 document.addEventListener("DOMContentLoaded", function () {
+  // Typing Animation for Hero Title
+  function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = "";
+
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+
+    setTimeout(type, 1000); // Start after 1 second
+  }
+
+  // Initialize typing animation for the hero title
+  const animatedTitle = document.getElementById("animated-title");
+  if (animatedTitle) {
+    const titleText = animatedTitle.textContent;
+    typeWriter(animatedTitle, titleText, 80);
+  }
+
+  // Animate stats numbers on scroll
+  function animateNumbers() {
+    const statNumbers = document.querySelectorAll(".stat-number, .mini-stat .stat-number");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            const finalValue = target.textContent.replace(/[^0-9]/g, "");
+            let currentValue = 0;
+            const increment = finalValue / 50;
+            const suffix = target.textContent.replace(/[0-9]/g, "");
+
+            const timer = setInterval(() => {
+              currentValue += increment;
+              if (currentValue >= finalValue) {
+                target.textContent = finalValue + suffix;
+                clearInterval(timer);
+              } else {
+                target.textContent = Math.floor(currentValue) + suffix;
+              }
+            }, 30);
+
+            observer.unobserve(target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    statNumbers.forEach((stat) => observer.observe(stat));
+  }
+
+  // Enhanced profile image hover effects
+  const profileImg = document.querySelector(".profile-img");
+  if (profileImg) {
+    profileImg.addEventListener("mouseenter", function () {
+      // Add some dynamic particle effects on hover
+      createParticles(this);
+    });
+  }
+
+  function createParticles(element) {
+    for (let i = 0; i < 5; i++) {
+      const particle = document.createElement("div");
+      particle.style.cssText = `
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particleFloat 1s ease-out forwards;
+        z-index: 1000;
+      `;
+
+      const rect = element.getBoundingClientRect();
+      particle.style.left = rect.left + Math.random() * rect.width + "px";
+      particle.style.top = rect.top + Math.random() * rect.height + "px";
+
+      document.body.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 1000);
+    }
+  }
+
+  // Add particle animation CSS
+  const particleStyle = document.createElement("style");
+  particleStyle.textContent = `
+    @keyframes particleFloat {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0);
+      }
+    }
+  `;
+  document.head.appendChild(particleStyle);
+
+  // Initialize animations
+  animateNumbers();
+
+  // Enhanced social link hover effects
+  const socialLinks = document.querySelectorAll(".social-link");
+  socialLinks.forEach((link) => {
+    link.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-5px) scale(1.1) rotate(5deg)";
+    });
+
+    link.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0) scale(1) rotate(0deg)";
+    });
+  });
+
+  // Mobile Menu Toggle & Animations
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navRight = document.querySelector(".nav-right");
 
@@ -46,35 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // Scroll indicator for projects
-  const createScrollIndicator = () => {
-    const indicator = document.createElement("div");
-    indicator.className = "scroll-indicator";
-    indicator.innerHTML = `
-      <div class="scroll-text">Projelerimi keşfet</div>
-      <div class="scroll-arrow">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    `;
-    document.body.appendChild(indicator);
-
-    // Hide indicator when user scrolls
-    let scrolled = false;
-    window.addEventListener("scroll", () => {
-      if (!scrolled && window.scrollY > 100) {
-        indicator.style.opacity = "0";
-        indicator.style.transform = "translateX(-50%) translateY(20px)";
-        scrolled = true;
-        setTimeout(() => {
-          indicator.remove();
-        }, 300);
-      }
-    });
-  };
-
-  // Create scroll indicator after a delay
-  setTimeout(createScrollIndicator, 2000);
 });
 
 var Tawk_API = Tawk_API || {},

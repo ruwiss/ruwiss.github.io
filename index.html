@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Ömer Gündoğar - Software Developer</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <title>omergundgr</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
 
@@ -31,43 +31,89 @@
           <span></span>
           <span></span>
         </button>
-        <div class="nav-right">
-          <ul class="nav-links">
-            <li><a href="https://github.com/ruwiss" target="_blank" rel="noopener noreferrer">Github Profilim</a></li>
-          </ul>
-        </div>
       </nav>
     </header>
 
     <main class="grid-2">
-      <section class="top-section">
-        <div class="hero-profile">
-          <img src="assets/images/pp.jpg" alt="Ömer Gündoğar profil fotoğrafı" class="profile-img" width="140" height="140" />
-          <h1>Ömer Gündoğar</h1>
-          <p class="hero-subtitle">Software Developer & Content Creator</p>
-          <div class="social-icons">
-            <a href="https://www.youtube.com/@hq_net" aria-label="YouTube kanalım"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/ruwiss" aria-label="GitHub profilim"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/omergundgr/" aria-label="LinkedIn profilim"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:rw67admob@gmail.com" aria-label="E-posta gönder"><i class="fas fa-envelope"></i></a>
+      <section class="hero-section">
+        <!-- Floating background elements -->
+        <div class="hero-background">
+          <div class="floating-element floating-1"></div>
+          <div class="floating-element floating-2"></div>
+          <div class="floating-element floating-3"></div>
+          <div class="floating-element floating-4"></div>
+          <div class="code-particles">
+            <span class="code-particle">{ }</span>
+            <span class="code-particle">&lt;/&gt;</span>
+            <span class="code-particle">( )</span>
+            <span class="code-particle">[ ]</span>
+            <span class="code-particle">{ }</span>
           </div>
         </div>
 
-        <div class="hero-content">
-          <h2 id="greeting">Hakkımda</h2>
-          <p class="hero-description">
-            <strong>4+ yıldır</strong> yazılım geliştirme dünyasında <strong>mobil uygulamalar</strong>, <strong>web projeleri</strong> ve <strong>bot & otomasyon sistemleri</strong> üzerinde çalışıyorum. Hem freelance projeler geliştiriyor hem de <strong>açık kaynak</strong> topluluğuna katkıda
-            bulunuyorum.
-          </p>
-          <p class="hero-passion">🎥 <strong>YouTube kanalımda</strong> teknik bilgileri paylaşarak öğrenme yolculuğumuzu birlikte sürdürüyoruz!</p>
+        <div class="hero-container">
+          <!-- Split layout hero -->
+          <div class="hero-left">
+            <div class="hero-profile-wrapper">
+              <div class="profile-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+              </div>
+              <div class="profile-image-container">
+                <img src="assets/images/pp.jpg" alt="Ömer Gündoğar profil fotoğrafı" class="profile-img" width="160" height="160" />
+                <div class="profile-status">🚀</div>
+              </div>
+            </div>
+
+            <div class="social-icons">
+              <a href="https://www.youtube.com/@hq_net" aria-label="YouTube kanalım" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="https://github.com/ruwiss" aria-label="GitHub profilim" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/omergundgr/" aria-label="LinkedIn profilim" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:rw67admob@gmail.com" aria-label="E-posta gönder" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <!-- Hero Title Section -->
+            <div class="hero-header">
+              <h1 class="hero-main-name">
+                <span class="name-part">Ömer</span>
+                <span class="name-part">Gündoğar</span>
+              </h1>
+              <div class="hero-main-title">
+                <span class="title-animated" id="animated-title-right">Ben Kimim ve Ne Yapıyorum?</span>
+              </div>
+            </div>
+
+            <!-- Compact Info Cards -->
+            <div class="info-cards">
+              <div class="info-card about-card">
+                <h3>Hakkımda</h3>
+                <p>
+                  <strong>4+ yıldır</strong> yazılım geliştirme dünyasında <strong>mobil uygulamalar</strong>, <strong>web projeleri</strong> ve <strong>otomasyon sistemleri</strong> üzerinde çalışıyorum. Hem freelance projeler geliştiriyor hem de <strong>açık kaynak</strong> topluluğuna katkıda
+                  bulunuyorum.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="bottom-section">
-        <div class="section-2">
+      <section class="projects-main-section">
+        <div class="projects-wrapper">
           <div class="projects-section">
-            <h2 id="projects">Projeler</h2>
+            <h2 id="projects">Son Projeler</h2>
             <div class="projects-grid">
+              <a href="https://www.r10.net/script-satisi/4538554-taska-gelismis-gorev-yap-para-kazan-scripti-129351-sektore-adim-atin-11088-paytr-bonus-referans-kanit.html" class="project-card" target="_blank" rel="noopener noreferrer">
+                <div class="project-image">
+                  <img src="assets/images/projects/13.gif" alt="Taska - Görev Yap Para Kazan | Admin Panel" loading="lazy" />
+                </div>
+                <div class="project-content">
+                  <h3>Taska Gelişmiş Görev Scripti</h3>
+                  <p>Farklı kullanıcı tipleriyle görev yaptırıp para kazandırmayı amaçlar.</p>
+                </div>
+              </a>
               <a href="https://github.com/ruwiss/ai-auto-free" class="project-card" target="_blank" rel="noopener noreferrer">
                 <div class="project-image">
                   <img src="assets/images/projects/12.png" alt="AI Auto Free uygulaması ekran görüntüsü" loading="lazy" />
